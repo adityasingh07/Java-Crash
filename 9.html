@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+function capsonly(e){
+	var x=document.getElementById('txtnum').value;
+	if(!(e.which>=65 && e.which<=90)){
+		e.preventDefault();
+	}
+}
+function alphaonly(e){
+	var y=document.getElementById('kuchbhi').value;
+	if(!(e.which>=65 && e.which <= 90 || e.which>=97 && e.which <= 122)){
+		e.preventDefault();
+	}
+}
+function myFunction() {
+  document.getElementById("myP").style.cursor = "Pointer";
+}
+function byebyeimage() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function showCoords(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var coords = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo4").innerHTML = coords;
+}
+function myFunction() {
+  window.open("https://www.google.com");
+}
+function pop(){
+	window.alert("Ping Ping!")
+}
+function popname()
+   	{
+   	var fn = document.getElementById("fn").value;
+   	var ln = document.getElementById("ln").value;
+   	window.alert(fn+" "+ln);
+   	}
+ function convert(e) {
+                    var f = document.getElementById("n3").value;
+                    var ans = f * 71.88;
+                    document.getElementById("n4").value = ans;
+                }
+</script>
+
+</head>
+
+<body>
+
+<input type="text" id="txtnum" onkeypress="capsonly(event)" placeholder="Enter Caps only">
+	</br>
+	</br>
+<input type="text" name="" id="kuchbhi" onkeypress="alphaonly(event)" placeholder = "Aphabets only">
+	</br>
+	</br>
+<button type="button" id="myP" onclick="myFunction()">Change cursor</button>
+	</br>
+	</br>
+
+<button onclick="byebyeimage()">Play with the image by clicking me!!</button>
+	</br>
+<img src="french.jpg" id="myDIV"> 
+<br>
+<br>
+<label id="demo4"> Position will appear here!</label>
+        <script>
+            var pos = "";
+            function showCoords(event) {
+                pos = "X coordinate: " + event.clientX +
+                " - Y coordinate: " + event.clientY;
+                document.getElementById("demo4").innerHTML = pos;
+            }
+            document.addEventListener("click", showCoords);
+            
+       </script>
+ <br>
+ <br>
+ <button onclick="myFunction()">Click me to open a new window!!</button>
+ <br>
+ <br>
+ <input type="submit" value= "Popup alert!!" onclick="pop()"name="">
+</br>
+</br>
+ <input type="text" id="fn" placeholder="First Name" onkeypress="alphOnly(event)" name=""><br>
+<input type="text" id="ln" placeholder="Last Name" onkeypress="alphOnly(event)" name=""><br>
+<input type="submit" value="Submit Name" onclick="popname()" name=""><br>
+<br>
+<input type="text" placeholder="Enter currency in $" id="n3" oninput="convert(event)">
+        <input type="text" placeholder="Currency in INR" id="n4">
+</body>
+</html>

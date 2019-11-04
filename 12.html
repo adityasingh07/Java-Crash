@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+    </head>
+    <body>
+        
+        <table id="table" border="1">
+            <tr>
+                <th>Roll No</th>
+                <th>Student Name</th>
+                <th>College Name</th>
+                <th>Marks</th>
+                <th>Sem</th>
+            </tr>
+
+        </table>
+        <script>
+            
+            var array = [['1','Virat','IIT','100','8'],['1','Virat','IIT','100','8'],['1','Virat','IIT','100','8'],['1','Virat','IIT','100','8'],['1','Virat','IIT','100','8']]
+                table = document.getElementById("table");
+            for(var i = 0; i < array.length; i++)
+           {
+               // create a new row
+               var newRow = table.insertRow(table.length);
+               for(var j = 0; j < array[i].length; j++)
+               {
+                   // create a new cell
+                   var cell = newRow.insertCell(j);
+                   
+                   // add value to the cell
+                   cell.innerHTML = array[i][j];
+               }
+           }
+        </script> 
+        
+    </body>
+</html>
+
+        

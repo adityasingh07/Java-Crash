@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function to display the table of the entered number!!</title>
+	<script type="text/javascript">
+		pprint = (function(){
+		var num;
+		num= Number(document.getElementById('ptext').value);
+		console.log(num);
+		var ptag = document.getElementById('printpl');
+		for (var i = 1; i <= 10; i++) {
+				
+				ptag.innerHTML += (num*i) + '</br>';
+						console.log(ptag.innerhtml);
+
+		}
+	})
+			
+	</script>
+</head>
+<body style="text-align: center;">
+	<h1>Function to display table!!</h1>
+<p><input type="text"  id='ptext' placeholder="Enter a number!"></p>
+<input type="button" value="Print Table" onclick="pprint()">
+<p id="printpl"></p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function numOnly(e){
+			//e.preventDefault();
+			if(!(e.which>=48 && e.which<=57))
+				e.preventDefault();
+		}
+	</script>
+</head>
+<body>
+	<br>
+<input type="text" name="" id = txtmob onkeypress="numOnly(event)" maxlength="10">
+</br>
+<input type="Submit" name="">
+</body>
+</html>
